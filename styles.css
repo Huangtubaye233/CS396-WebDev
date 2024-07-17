@@ -1,3 +1,51 @@
+/* Define default light theme variables */
+:root {
+    --button-bg: #4CAF50; /* Green background */
+    --button-text: white;
+    --button-hover-bg: #45a049; /* Darker green on hover */
+    --nav-button-bg: #4CAF50;
+    --nav-button-hover-bg: #45a049;
+    --settings-button-bg: #4CAF50;
+    --settings-button-hover-bg: #45a049;
+}
+
+/* Dark mode variables */
+body.dark {
+    --button-bg: #555; /* Dark grey background */
+    --button-text: #ddd; /* Light grey text */
+    --button-hover-bg: #777; /* Lighter grey on hover */
+    --nav-button-bg: #555;
+    --nav-button-hover-bg: #777;
+    --settings-button-bg: #555;
+    --settings-button-hover-bg: #777;
+}
+
+/* High contrast mode variables */
+body.high-contrast {
+    --button-bg: #ffdd00; /* Bright yellow background */
+    --button-text: #000; /* Black text */
+    --button-hover-bg: #ccaa00; /* Darker yellow on hover */
+    --nav-button-bg: #ffdd00;
+    --nav-button-hover-bg: #ccaa00;
+    --settings-button-bg: #ffdd00;
+    --settings-button-hover-bg: #ccaa00;
+}
+
+/* Button base styles */
+button, .nav-button, #settings-btn {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover, .nav-button:hover, #settings-btn:hover {
+    background-color: var(--button-hover-bg);
+}
+
 body {
     background-color: #ffffff;
     color: #333333;
@@ -19,87 +67,6 @@ body.high-contrast {
     padding: 0;
 }
 
-/* all the buttons */
-body button {
-    background-color: #007BFF;
-    color: white;
-}
-
-body button:hover {
-    background-color: #0056b3;
-}
-
-body.dark button {
-    background-color: #555; 
-    color: #ddd; 
-}
-
-body.dark button:hover {
-    background-color: #777;
-}
-
-body.high-contrast button {
-    background-color: #ffdd00; 
-    color: #000000; 
-}
-
-body.high-contrast button:hover {
-    background-color: #ccaa00; 
-}
-
-body .nav-button {
-    background-color: #007BFF; 
-}
-
-body .nav-button:hover {
-    background-color: #0056b3; 
-}
-
-body.dark .nav-button {
-    background-color: #555; 
-    color: #ddd; 
-}
-
-body.dark .nav-button:hover {
-    background-color: #777; 
-}
-
-body.high-contrast .nav-button {
-    background-color: #ffdd00; 
-    color: #000000;
-}
-
-body.high-contrast .nav-button:hover {
-    background-color: #ccaa00; 
-}
-
-body #settings-btn {
-    background-color: #007BFF; 
-}
-
-body #settings-btn:hover {
-    background-color: #0056b3; 
-}
-
-body.dark #settings-btn {
-    background-color: #555;
-    color: #ddd; 
-}
-
-body.dark #settings-btn:hover {
-    background-color: #777; 
-}
-
-body.high-contrast #settings-btn {
-    background-color: #ffdd00;
-    color: #000; 
-}
-
-body.high-contrast #settings-btn:hover {
-    background-color: #ccaa00; 
-}
-/* all the buttons */
-
 header nav {
     display: flex;
     justify-content: space-between;
@@ -117,33 +84,6 @@ header nav div {
 header nav img {
     width: 30px;
     height: 30px;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    background: #333;
-    padding: 0 10px;
-}
-
-header nav div {
-    display: flex;
-    align-items: center;  
-}
-
-#settings-btn {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 30px;
-}
-
-#settings-btn:hover {
-    background-color: #0056b3;
 }
 
 .settings-container {
@@ -164,25 +104,15 @@ header nav div {
     background: white;
 }
 
-#settings-btn {
-    z-index: 5; 
-}
-
 .font-selector {
-    position: absolute;
-    display: none;
-    top: 30px; 
-    right: 0; 
-    min-width: 140px;
+    top: 30px;
+    right: 0;
     z-index: 10;
 }
 
 .theme-selector {
-    position: absolute;
-    display: none;
     top: 60px;
     right: 0;
-    min-width: 140px;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     border: 1px solid #ccc;
@@ -201,12 +131,6 @@ main {
 main section {
     text-align: center;
     margin-top: 20px;
-}
-
-button {
-    width: 75px; 
-    background-color: #007BFF; 
-    color: white;
 }
 
 .container {
@@ -243,20 +167,10 @@ button {
     text-align: center;
 }
 
-
-#homepagepara {
+#homepagepara, #memepara {
     position: absolute;
     left: 50%; 
     transform: translateX(-50%); 
-    width: 50%; 
-    text-align: center;
-}
-
-#memepara {
-    position: absolute;
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 60%; 
     text-align: center;
 }
 
@@ -271,7 +185,6 @@ div.music-player {
     align-items: center; 
 }
 
-
 img.avatar {
     width: 275px;
     height: 275px;
@@ -280,35 +193,9 @@ img.avatar {
     margin: 20px auto; 
 }
 
-ul {
+ul, footer ul {
     list-style: none;
     padding: 0;
-}
-
-header nav .nav-button {
-    display: flex;
-    align-items: center; 
-    text-decoration: none;
-    color: white;
-    padding: 5px 5px;
-    background-color: #007BFF;
-    border-radius: 5px;
-    margin: 0 3px;
-    transition: background-color 0.2s; 
-}
-
-header nav .nav-button:hover {
-    background-color: #0056b3; 
-}
-
-header nav .nav-button img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px; 
-}
-
-header nav .nav-button span {
-    display: block;  
 }
 
 footer {
@@ -320,16 +207,7 @@ footer {
     width: 100%; 
 }
 
-footer ul {
-    display: flex;
-    flex-wrap: wrap; 
-    padding: 0;
-    width: 100%; 
-    justify-content: space-around; 
-}
-
 footer ul li {
-    list-style: none;
     width: 12.5%; 
     padding: 5px; 
 }
@@ -338,12 +216,13 @@ footer ul li button {
     width: 100%; 
     padding: 10px 0; 
     text-align: center;
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--button-bg);
+    color: var(--button-text);
     border: none;
     border-radius: 5px;
+    transition: background-color 0.3s; 
 }
 
 footer ul li button:hover {
-    background-color: #0056b3;
+    background-color: var(--button-hover-bg);
 }
