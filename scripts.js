@@ -47,3 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, true);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    anime({
+        targets: '.avatar',
+        scale: [0.1, 1], // Start from scale 0.1 to 1
+        opacity: [0, 1], // Fade in from 0 to full opacity
+        duration: 800,
+        easing: 'easeOutExpo'
+    });
+});
