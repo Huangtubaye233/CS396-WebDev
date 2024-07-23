@@ -347,3 +347,18 @@ footer ul li button {
 footer ul li button:hover {
     background-color: #45a049;
 }
+
+#event-details {
+    position: absolute;
+    top: 75%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 100; 
+    width: 80%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    display: none; 
+}

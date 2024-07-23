@@ -51,9 +51,51 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     anime({
         targets: '.avatar',
-        scale: [0.1, 1], // Start from scale 0.1 to 1
-        opacity: [0, 1], // Fade in from 0 to full opacity
-        duration: 800,
+        scale: [0.25, 1], 
+        opacity: [0, 1], 
+        duration: 2000,
         easing: 'easeOutExpo'
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('event1-button').addEventListener('click', function() {
+        showEventDetails('Details about Event 1...');
+    });
+
+    document.getElementById('event2-button').addEventListener('click', function() {
+        showEventDetails('Details about Event 2...');
+    });
+});
+
+function showEventDetails(detailsText) {
+    const eventDetails = document.getElementById('event-details');
+    document.getElementById('event-text').textContent = detailsText;
+    eventDetails.style.display = 'block';
+    eventDetails.style.opacity = 0;
+    eventDetails.style.transform = 'translate(-50%, -50%) scale(0.9)'; 
+    
+    anime({
+        targets: eventDetails,
+        opacity: 1,
+        scale: [0.75, 1], 
+        translateY: ['-50%', '-50%'],
+        easing: 'easeOutExpo',
+        duration: 500
+    });
+}
+
+function closeEventDetails() {
+    const eventDetails = document.getElementById('event-details');
+    anime({
+        targets: eventDetails,
+        opacity: 0,
+        scale: [1, 0.75],
+        translateY: ['-50%', '-50%'], 
+        easing: 'easeInExpo',
+        duration: 500,
+        complete: function() {
+            eventDetails.style.display = 'none'; 
+        }
+    });
+}
