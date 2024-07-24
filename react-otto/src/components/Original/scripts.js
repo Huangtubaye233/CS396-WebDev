@@ -99,3 +99,55 @@ function closeEventDetails() {
         }
     });
 }
+
+// music
+const songs = [
+    { title: "Song 1", cover: "cover1.jpg", audio: "song1.mp3", videoUrl: "https://www.bilibili.com/video1" },
+    { title: "Song 2", cover: "cover2.jpg", audio: "song2.mp3", videoUrl: "https://www.bilibili.com/video2" },
+];
+
+let currentSongIndex = 0;
+let isPlaying = false;
+const audioPlayer = new Audio();
+
+function loadSong(songIndex) {
+    const song = songs[songIndex];
+    document.getElementById('song-title').textContent = song.title;
+    document.getElementById('song-cover').src = song.cover;
+    document.getElementById('video-link').href = song.videoUrl;
+    audioPlayer.src = song.audio;
+}
+
+function togglePlay() {
+    if (isPlaying) {
+        audioPlayer.pause();
+        document.getElementById('song-cover').classList.remove('rotating');
+    } else {
+        audioPlayer.play();
+        document.getElementById('song-cover').classList.add('rotating');
+    }
+    isPlaying = !isPlaying;
+}
+
+function nextSong() {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    loadSong(currentSongIndex);
+    if (isPlaying) {
+        togglePlay();
+    }
+}
+
+function previousSong() {
+    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    loadSong(currentSongIndex);
+    if (isPlaying) {
+        togglePlay();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    loadSong(currentSongIndex);
+    document.getElementById('song-cover').classList.remove('rotating'); // Ensure no rotation on load
+});
+
+

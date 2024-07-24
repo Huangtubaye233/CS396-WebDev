@@ -46,15 +46,17 @@
 
     <main class="container">
         <section>
-            <h2>Song Title</h2>
-            <div class="music-player">Music Player</div>
-            <div>
-                <button>Previous</button>
-                <button>Play</button>
-                <button>Next</button>
+            <h2 id="song-title">Song Title</h2>
+            <div class="music-player">
+                <img src="default_cover.jpg" alt="Song Cover" id="song-cover" class="rotating" style="width:100px; height:100px;">
             </div>
-            <a href="https://www.bilibili.com">Watch Original Video</a>
-        </section>
+            <div>
+                <button onclick="previousSong()">Previous</button>
+                <button onclick="togglePlay()">Play</button>
+                <button onclick="nextSong()">Next</button>
+            </div>
+            <a href="#" id="video-link">Watch Original Video</a>
+        </section>        
     </main>
 </body>
 </html>

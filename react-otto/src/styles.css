@@ -1,8 +1,13 @@
+:root {
+    --font-family: sans-serif;
+}
+
 body {
     background-color: #ffffff;
     color: #333333;
     margin: 0;
     padding: 0;
+    font-family: var(--font-family);
 }
 
 body.dark {
@@ -10,6 +15,7 @@ body.dark {
     color: #ffffff;
     margin: 0;
     padding: 0;
+    font-family: var(--font-family);
 }
 
 body.high-contrast {
@@ -17,6 +23,7 @@ body.high-contrast {
     color: #ffff00;
     margin: 0;
     padding: 0;
+    font-family: var(--font-family);
 }
 
 /* all the buttons */
@@ -218,7 +225,7 @@ button {
 
 .container aside {
     position: absolute;
-    left: 5px; 
+    left: 15px; 
     top: 250px;
     width: 110px; 
     bottom: 0;
@@ -260,7 +267,7 @@ button {
     text-align: center;
 }
 
-div.music-player {
+.music-player {
     width: 300px;
     height: 300px;
     border-radius: 50%; 
@@ -348,17 +355,45 @@ footer ul li button:hover {
     background-color: #45a049;
 }
 
-#event-details {
+/* music */
+.rotating {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+header nav .settings-container {
+    position: relative; 
+}
+
+/* rebuild drop down*/
+.dropdown-menu {
     position: absolute;
-    top: 75%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    z-index: 100; 
-    width: 80%;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    text-align: center;
-    display: none; 
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 8px 16px;
+    cursor: pointer;
+    color: black;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
 }
