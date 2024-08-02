@@ -11,7 +11,7 @@ const App = () => {
 
 
   return (
-    <Router>
+    <Router basename="/CS396-WebDev">
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
