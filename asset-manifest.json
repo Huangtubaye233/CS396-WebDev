@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/CS396-WebDev/static/css/main.9d183785.css",
-    "main.js": "/CS396-WebDev/static/js/main.456cb475.js",
+    "main.css": "/CS396-WebDev/static/css/main.3ef77865.css",
+    "main.js": "/CS396-WebDev/static/js/main.4711e2c2.js",
     "static/js/453.2a825b5e.chunk.js": "/CS396-WebDev/static/js/453.2a825b5e.chunk.js",
+    "static/media/SAKANA.mp3": "/CS396-WebDev/static/media/SAKANA.f8cfab3f40257f805b2b.mp3",
+    "static/media/YOASOBI.mp3": "/CS396-WebDev/static/media/YOASOBI.656821f0bd88f19830d4.mp3",
+    "static/media/Tornado, Maybe.jpg": "/CS396-WebDev/static/media/Tornado, Maybe.b38173312af880837349.jpg",
+    "static/media/Racing Into the Wheelchair.jpg": "/CS396-WebDev/static/media/Racing Into the Wheelchair.f97b35f2084a60b77eff.jpg",
     "static/media/music.png": "/CS396-WebDev/static/media/music.2c4cea106c1b62d7e546.png",
     "static/media/playground.png": "/CS396-WebDev/static/media/playground.4fa39e0c233972d3b24b.png",
     "static/media/memes.png": "/CS396-WebDev/static/media/memes.2117a592718263b4e64e.png",
     "index.html": "/CS396-WebDev/index.html",
-    "main.9d183785.css.map": "/CS396-WebDev/static/css/main.9d183785.css.map",
-    "main.456cb475.js.map": "/CS396-WebDev/static/js/main.456cb475.js.map",
+    "main.3ef77865.css.map": "/CS396-WebDev/static/css/main.3ef77865.css.map",
+    "main.4711e2c2.js.map": "/CS396-WebDev/static/js/main.4711e2c2.js.map",
     "453.2a825b5e.chunk.js.map": "/CS396-WebDev/static/js/453.2a825b5e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d183785.css",
-    "static/js/main.456cb475.js"
+    "static/css/main.3ef77865.css",
+    "static/js/main.4711e2c2.js"
   ]
 }
