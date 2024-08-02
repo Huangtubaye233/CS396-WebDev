@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import YOASOBI from '../assets/YOASOBI.mp3';
+import SAKANA from '../assets/SAKANA.mp3'
+import cover1 from '../assets/Racing Into the Wheelchair.jpg'
+import cover2 from '../assets/Tornado, Maybe.jpg'
 
 const songs = [
-    { title: "Song 1", cover: "cover1.jpg", audio: "song1.mp3", videoUrl: "https://www.bilibili.com/video1" },
-    { title: "Song 2", cover: "cover2.jpg", audio: "song2.mp3", videoUrl: "https://www.bilibili.com/video2" },
+    { title: "Racing Into the Wheelchair", cover: cover1, audio: YOASOBI, videoUrl: "https://www.bilibili.com/video/BV1bV4y1k7tF" },
+    { title: "Tornado, Maybe", cover: cover2, audio: SAKANA, videoUrl: "https://www.bilibili.com/video/BV1Tj411L7hX" },
 ];
 
 const MusicPage = () => {
