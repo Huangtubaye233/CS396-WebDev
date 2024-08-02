@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 
 const MemesPage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
