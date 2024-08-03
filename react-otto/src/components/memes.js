@@ -5,11 +5,11 @@ const MemesPage = () => {
     const [selectedMeme, setSelectedMeme] = useState(null);
 
     const memes = [
-        { id: 1, description: "Meme description for 1", videoUrl: "http://placeholder.com/video1" },
-        { id: 2, description: "Meme description for 2", videoUrl: "http://placeholder.com/video2" },
-        { id: 3, description: "Meme description for 3", videoUrl: "http://placeholder.com/video3" },
-        { id: 4, description: "Meme description for 4", videoUrl: "http://placeholder.com/video4" },
-        { id: 5, description: "Meme description for 5", videoUrl: "http://placeholder.com/video5" },
+        { id: 'King Jiji', description: "Because OTTO is too thin and looks like a monkey, similar to King Jiji from the Chinese animated series 'Boonie Bears,' fans have also given him this nickname.", videoUrl: "https://www.youtube.com/watch?v=TNYomJ-dF4s" },
+        { id: '欧内的手，好汉', description: "The meme '欧内的手，好汉' originates from a playful manipulation of language where the phrase '大家好，我是电棍' (Hello everyone, I am OTTO) is reversed in audio. This reversal turns into the nonsensical and humorous phrase '欧内的手，好汉', which literally translates to 'The hand inside, a brave man.' This form of content is known as '鬼畜' (Kichiku) in Chinese internet culture, which involves remixing audio and video clips to create entertaining and often absurd variations.", videoUrl: "https://www.youtube.com/shorts/J_e451W9fKk" },
+        { id: '哈利路大旋风', description: "The meme '哈利路大旋风' (Hallelu the Grand Whirlwind) originated from reversing the audio of a video featuring OTTO, a popular streamer. In the original footage, OTTO reacts dramatically to a teammate disrupting his chance at a 'Penta Kill' in League of Legends. The reversed audio unintentionally sounds like '哈利路大旋风!'", videoUrl: "https://www.youtube.com/watch?v=EPfyBDNbhL4" },
+        { id: '奥利安费, all in', description: "The meme '奥利安费, all in' originated from a video where OTTO's speech was played in reverse. Originally saying '别追了' (don't chase), it became '奥利安费' when reversed. Typically fans of OTTO who enjoy these reversed audio clips for their humor and absurdity.", videoUrl: "https://www.youtube.com/watch?v=JKRn_44U-A8" },
+        { id: '一把米诺', description: "The meme '一把米诺' emerged from reversing the audio of the phrase 'caonimabi,' a vulgar expression in Chinese. When reversed, it phonetically approximates 'ibaminoac,' which humorously translates to '一把米诺' or 'a handful of Mino' when the final consonant is dropped. ", videoUrl: "https://www.youtube.com/watch?v=79MEk_hjh58" },
     ];
 
     const handleButtonClick = (meme) => {
@@ -31,7 +31,7 @@ const MemesPage = () => {
                 <footer>
                     <ul>
                         {memes.map(meme => (
-                            <li key={meme.id}><button onClick={() => handleButtonClick(meme)}>Meme {meme.id}</button></li>
+                            <li key={meme.id}><button onClick={() => handleButtonClick(meme)}>{meme.id}</button></li>
                         ))}
                     </ul>
                 </footer>
@@ -41,7 +41,7 @@ const MemesPage = () => {
                 <div className="modal" onClick={handleCloseModal}>
                     <div className="modal-content" onClick={e => e.stopPropagation()}>
                         <span className="close-button" onClick={handleCloseModal}>&times;</span>
-                        <h2>Meme {selectedMeme.id} Details</h2>
+                        <h2>{selectedMeme.id} Details</h2>
                         <p>{selectedMeme.description}</p>
                         <a href={selectedMeme.videoUrl} target="_blank" rel="noopener noreferrer">Watch Original Video</a>
                     </div>
